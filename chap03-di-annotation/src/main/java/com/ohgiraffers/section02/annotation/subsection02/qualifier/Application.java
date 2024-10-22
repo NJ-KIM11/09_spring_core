@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.annotation.subsection01.subsection02.qualifier;
+package com.ohgiraffers.section02.annotation.subsection02.qualifier;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

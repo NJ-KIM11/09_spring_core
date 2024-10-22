@@ -10,7 +10,7 @@ public class Application {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("com.ohgiraffers.section01");
-        BookService bookService = context.getBean(BookService.class);
+        BookService bookService = context.getBean("bookServiceSetter", BookService.class);
 
         List<BookDTO> bookList = bookService.selectAllBooks();
         for(BookDTO book : bookList) {

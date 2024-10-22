@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="today" class="java.util.Date" scope="prototype"/>
+    <bean id="carpBread" class="com.ohgiraffers.common.Bread">
+        <property name="name" value="붕어빵"/>
+        <property name="price" value="1000"/>
+        <property name="bakedDate" ref="today"/>
+
+    </bean>
+
+    <bean id="milk" class="com.ohgiraffers.common.Beverage">
+        <property name="name" value="딸기우유"/>
+        <property name="price" value="1500"/>
+        <property name="capacity" value="500"/>
+    </bean>
+
+    <bean id="water" class="com.ohgiraffers.common.Beverage">
+        <property name="name" value="지리산암반수"/>
+        <property name="price" value="1000"/>
+        <property name="capacity" value="500"/>
+    </bean>
+
+    <bean id="cart" class="com.ohgiraffers.common.ShoppingCart" scope="prototype">
+    </bean>
+
+    <bean id="owner" class="com.ohgiraffers.section03.subsection01.xmlconfig.Owner"
+    init-method="openShop" destroy-method="closeShop">
+    </bean>
+
+</beans>
